@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+</head>
+<body>
+ 
+    <header class="header">
+        <div class="container">
+            <div class="header_wrapper">
+              <a href="#">Studio</a>
+              <ul class="autolinks flex gap-2" id="menu">
+                  <li><a href="./index.html">Home</a></li>
+                  <li><a href="./single.html">Blog</a></li>
+                  <li><a href="">Podcasts</a></li>
+                  <li><a href="./book.html">Books</a></li>
+                  <li><a href="#">About</a></li>
+              </ul>
+    
+              <div class="menu">
+                <a href="./contacts.html"class="fa-solid fa-building"></a>
+                <button class="theme"><i class="far fa-sun"></i></button>
+            
+              <button><i class="bar fas fa-bars" id="toggleMenu"></i></button>
+            </div>
+        </div> 
+       </div>
+    </header>
+
+
+<section class="contact p-5">
+       
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod autem eligendi illum, mollitia sed nostrum blanditiis possimus fuga perspiciatis deleniti! Eveniet recusandae qui officiis distinctio magni non, odio provident aperiam.</p>
+        <div class="contact_wrapper">
+        <div class="contact_form py-5">
+            <form class="" action="">
+            <div class="input_wrap">
+                <input required type="text" name="" id="">
+                <label for="">Name</label>
+                <span>Required*</span>
+            </div>
+            <div class="input_wrap">
+                <input required type="text" name="" id="">
+                <label for="">Subject</label>
+                <span>Required*</span>
+            </div>
+            <div class="input_wrap">
+                <input required type="text" name="" id="">
+                <label for="">E-Mail</label>
+                <span>Required*</span>
+            </div>
+            <div class="input_wrap">
+                <textarea  required name="" id="" cols="30" rows="10"></textarea>
+                <label for="">Message</label>
+                <span>Required*</span>
+            </div>
+            <button>Send Message</button>
+        </form>
+        </div>
+        <div class="contact_info">
+            <ul class="p-2 m-2">
+            <li><i class="fas fa-envelope"></i>My Blog @hello_fromhere.com</li>
+            <li><i class="fas fa-phone"></i>09123456789</li>
+            <li><i class="fas fa-map-marker-alt"></i>Nowhere, Nashville</li>
+        </ul>
+    </div>
+    </div>
+</div>
+  </section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer_wrapper">
+            <div class="footer_form">
+                <h3>Send Me News</h3>
+                <form action="">
+                    <input type="text" placeholder="Enter your Email">
+                    <button>Get Insight</button>
+                </form>
+            </div>
+            <div class="footer_links">
+                <div class="footer_box">
+                <h4>Content</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Podcast</a></li>
+                    <li><a href="#">Book</a></li>
+                    <li><a href="#">Subscription</a></li>
+                </ul>
+                </div>
+
+                <div class="footer_box">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Partnership</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                    </div>
+
+                    <div class="footer_box">
+                        <h4>Social</h4>
+                        <ul>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Youtube</a></li>
+                        </ul>
+                        </div>
+            </div>
+            
+        </div>
+        <div class="footer_bottom">
+            <a href="#">Studio</a>
+
+            <ul>
+                <li>&copy; Q Studio By Loverboy</li>
+                <li>All rights reserved</li>
+                <li><a href="#"></a>Privacy</li>
+                <li><a href="#"></a>Contact</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+<script>
+
+        const toggleMenu = document.querySelector("#toggleMenu");
+        const menu = document.querySelector("#menu");
+    
+        toggleMenu.addEventListener("click", () => {
+            menu.classList.toggle("open");
+            body.classList.toggle("open");
+        });
+      
+        const btnTheme = document.querySelector(".theme");
+        const root = document.querySelector(":root");
+        const body = document.querySelector("body");
+        const icon = document.querySelector(".far");
+
+        btnTheme.addEventListener("click", () => {
+            if (body.classList.contains("dark")) {
+            body.classList.remove("dark");
+            root.style.setProperty("--light", "#fff");
+            root.style.setProperty("--dark", "#000");
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+            } else {
+            body.classList.add("dark");
+            root.style.setProperty("--light", "#000");
+            root.style.setProperty("--dark", "#fff");
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+            }
+        });
+    </script>
+
+
+</body>
+</html>

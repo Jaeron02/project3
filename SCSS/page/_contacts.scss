@@ -1,0 +1,77 @@
+@use "../abstract" as *;
+@use "../base" as *;
+@use "../component" as *;
+@use "../layout" as *;
+
+
+.contact_wrapper{
+    @include mediaQuery{
+        @include unevenGrid(2fr 1fr, 5rem);
+    }
+}
+.input_wrap{
+    position: relative;
+        input, textarea{
+            width: 100%;
+            padding: 1rem;
+            border:none;
+            border-bottom: 1px solid $clr-dark;
+            // box-sizing: none;
+            outline: none;
+            font-size: 1.5rem;
+            background: transparent;
+            
+            &:focus,&:valid{
+                border-color: coral;
+                &+label{
+                    top:-1rem;
+                    left:0;
+                    font-size: 1.5rem;
+                }
+            }
+    }
+    label{
+        position: absolute;
+        top: 1rem;
+        opacity: 0.5;
+        font-size: 1.4rem;
+        transition:.5s ease;
+    }
+    span{
+        color:red;
+        font-size: 1.25rem;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+.contact_form{
+    margin-bottom: 5rem;
+    button{
+        min-width: 20rem;
+        padding: 1rem;
+        border:none;
+        text-transform: uppercase;
+        background: $clr-dark;
+        color: $clr-light;
+        &:active{
+            color:$clr-dark;
+            background-color: $clr-light;
+            border: 1px solid $clr-dark 
+        }
+    }
+}
+.contact_info{
+    margin-bottom: 2rem;
+    @include mediaQuery{
+        justify-self: flex-end;
+        align-self: flex-end;
+        transform: translateY(-5rem);
+    }
+    
+    li{
+        margin-bottom: 1rem;
+        i{
+            padding-right: 1rem;
+        }
+    }
+}

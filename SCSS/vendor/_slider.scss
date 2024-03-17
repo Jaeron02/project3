@@ -1,0 +1,12 @@
+@use '../abstract' as  *;
+.tns{
+    @include flex(space-between, center);
+    margin: 2rem 0;
+
+    button{
+        padding: (0, 2rem,0,2rem);
+        background: transparent;
+        border: none;
+        font-size: 3rem;
+    }
+}
